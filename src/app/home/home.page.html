@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-radio-group [(ngModel)] = "radioSelecionada">
+      <ion-item>
+        <ion-label>Pix</ion-label>
+        <ion-radio slot="end" value="Pix"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Débito</ion-label>
+        <ion-radio slot="end" value="Debito"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Crédito</ion-label>
+        <ion-radio slot="end" value="Credito"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+  <ion-item>
+    <ion-label position="floating">Digite o valor:</ion-label>
+    <ion-input [(ngModel)]="valor"></ion-input>
+  </ion-item>
+
+<ion-button size="small" (click)="verificarRadio()">Calcular Desconto</ion-button>
+
+</ion-content>
